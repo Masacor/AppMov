@@ -1,0 +1,86 @@
+// .ancho_columna_titulos {
+//     width: 170px;
+// }
+
+/* styles.css */
+
+ion-content {
+  --padding-top: 20px;
+  --padding-bottom: 20px;
+  --padding-end: 20px;
+  --padding-start: 20px;
+  --background: transparent url('https://www.duoc.cl/wp-content/uploads/2020/05/header-sede-plaza-oeste.png') no-repeat center center / cover;
+
+}
+
+ion-header#mi-encabezado {
+  background-color: #1A1A1A; /* Cambia el color de fondo a azul oscuro */
+  height: 10%; /* Cambia la altura según tus necesidades */
+}
+
+
+
+.tabla-qr {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .tabla-qr th, .tabla-qr td {
+    padding: 8px;
+    border: 1px solid #ccc;
+    text-align: left;
+  }
+  
+  .tabla-qr th {
+    background-color: #FFB800;
+  }
+  
+  .ancho_columna_titulos {
+    width: 40%;
+  }
+  
+
+   ion-img{
+     width: 100px; 
+     height: 100PX;
+     margin-left: 20px;
+ }
+
+// Texto deslkzante
+.sliding-text-container {
+
+  overflow: hidden;
+}
+
+.sliding-text {
+  animation: slideRight 5s infinite linear;
+  // white-space: nowrap;
+  font-size: 28px;
+
+  
+}
+
+@keyframes slideRight {
+  
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+
+ion-button {
+  width: 100%;
+  margin-bottom: 12px;
+  color:#1A1A1A;
+  --background: #FFB800;
+  --background-hover: #FFB800;
+  --background-activated: #FFB800;
+  --background-focused: #FFB800;
+
+  --padding-top: 10px;
+  --padding-bottom: 10px
+}
+

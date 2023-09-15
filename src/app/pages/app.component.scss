@@ -1,0 +1,30 @@
+
+ion-img{
+    width: 100px; 
+    height: 100px;
+    margin-left: 20px;
+}
+
+.container {
+    background-image: url('https://th.bing.com/th/id/R.bb7450e3c956d2111e8dd804fe9fb4fe?rik=0OgRvgOi90S98A&riu=http%3a%2f%2frrnn.duoc.cl%2fsites%2fdefault%2ffiles%2fsede_padre_alonso.jpg&ehk=rtDBT%2fKcs%2fE7o9CkEB9PBJWJHkO%2fMo5FJWep64V6P7I%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1'); 
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+  }
+  
+  ion-content {
+    --padding-top: 20px;
+    --padding-bottom: 20px;
+    --padding-end: 20px;
+    --padding-start: 20px;
+    --background: transparent url('https://th.bing.com/th/id/R.bb7450e3c956d2111e8dd804fe9fb4fe?rik=0OgRvgOi90S98A&riu=http%3a%2f%2frrnn.duoc.cl%2fsites%2fdefault%2ffiles%2fsede_padre_alonso.jpg&ehk=rtDBT%2fKcs%2fE7o9CkEB9PBJWJHkO%2fMo5FJWep64V6P7I%3d&risl=&pid=ImgRaw&r=0&sres=1&sresct=1') no-repeat center center / cover;
+  }
+
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
