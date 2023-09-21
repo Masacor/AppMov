@@ -3,6 +3,9 @@ import { Component, ElementRef, ViewChild, AfterViewInit } from '@angular/core';
 import { LoadingController } from '@ionic/angular';
 import jsQR, { QRCode } from 'jsqr';
 
+import { ActivatedRoute, Router } from '@angular/router';
+import { Usuario } from 'src/app/model/Usuario';
+
 @Component({
   selector: 'app-qrreader',
   templateUrl: './qrreader.page.html',
@@ -34,9 +37,13 @@ export class QrreaderPage implements AfterViewInit {
   public seccion: string = '';
   public sede: string = '';
 
+
   public constructor(private loadingController: LoadingController) {
 
+
   }
+
+
 
   ngAfterViewInit() {
     this.limpiarDatos();
@@ -161,4 +168,10 @@ export class QrreaderPage implements AfterViewInit {
   }
 
   
+
 }
+
+
+
+
+

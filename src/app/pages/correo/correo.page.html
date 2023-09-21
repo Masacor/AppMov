@@ -36,9 +36,9 @@
   </ion-toolbar>
 </ion-footer> -->
 
-<ion-header>
-  <ion-toolbar>
-    <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"></ion-img>
+<ion-header id="mi-encabezado">
+  <ion-toolbar color="#1A1A1A">
+    <ion-img src="https://reqlut2.s3.sa-east-1.amazonaws.com/reqlut-images/duoc/logo_duoc_white.png?v=50.7"></ion-img>
   </ion-toolbar>
 </ion-header>
 
@@ -48,13 +48,14 @@
 
     <ion-card-title class="ion-text-center">
       <ion-label>
-        <h2>¡Ingrese su correo!</h2>
+        <h2> Recuperar Contraseña</h2>
+        <h2>Paso 1: Ingrese su correo </h2>
       </ion-label>
     </ion-card-title>
 
     <ion-card-content>
       <ion-item>
-        <ion-label position="floating">Correo</ion-label>
+        <ion-label position="floating">Ingresa tu correo</ion-label>
           <ion-card-subtitle></ion-card-subtitle>
           <ion-input type="text" [(ngModel)]="correo" placeholder="Example@gmail.com"></ion-input>
           <!-- <a (click)="ingresarPaginaValidarRespuestaSecreta()">Recuperar contraseña</a> -->
@@ -66,10 +67,11 @@
 </div>
 </ion-content>
 
-<ion-footer>
-  <ion-toolbar color="primary">
+<ion-footer >
+  <ion-toolbar color="warning">
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/login']">Volver</ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-footer> 
+

@@ -1,6 +1,6 @@
-import { ActivatedRoute, Router } from '@angular/router';
-import { Usuario } from 'src/app/model/Usuario';
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';
+import { Usuario } from 'src/app/model/Usuario';
 
 @Component({
   selector: 'app-pregunta',
@@ -11,45 +11,35 @@ export class PreguntaPage implements OnInit {
 
   public usuario: Usuario;
   public respuesta: string = '';
-  public pregunta: string = '';
 
   constructor(
-    private activatedRoute: ActivatedRoute,
-    private router: Router) 
-  {
+    private activedRoute: ActivatedRoute,
+    private router: Router
+  ) {
+    this.usuario = null; // Inicializa con null u otro valor por defecto
 
-    this.activatedRoute.queryParams.subscribe(params => {
-      if (this.router.getCurrentNavigation().extras.state) {
-        this.usuario = this.router.getCurrentNavigation().extras.state.usuario;
+    this.activedRoute.queryParams.subscribe((params) => {
+      const navigationState = this.router.getCurrentNavigation()?.extras?.state;
+      if (navigationState && 'usuario' in navigationState) {
+        this.usuario = navigationState['usuario'];
       } else {
         this.router.navigate(['/login']);
       }
     });
   }
 
-  ngOnInit() {
-  }
-
-  // public validarRespuestaSecreta(): void {
-  //   if (this.usuario.respuestaSecreta === this.respuesta) {
-  //     alert('CORRECTO!!! TU CLAVE ES ' + this.usuario.password);
-  //   }
-  //   else {
-  //     alert('INCORRECTO!!!');
-  //   }
-  // }
-
   public validarRespuestaSecreta(): void {
-    if (this.usuario.respuestaSecreta === this.respuesta) {
-      // Redirigir a la página "correcto" y pasar la clave como parámetro
-      alert('CORRECTO!!! Su clave es: ' + this.usuario.password)
-      this.router.navigate(['/correcto'], {
-        state: { clave: this.usuario.password }
-      });
+    if (this.usuario && this.usuario.respuestaSecreta === this.respuesta) {
+      const navigationExtras: NavigationExtras = {
+        state: {
+          usuario: this.usuario
+        }
+      };
+      this.router.navigate(['/correcto'],navigationExtras)
     } else {
-      alert('INCORRECTO!!! vuelva a intentarlo')
-      this.router.navigate(['/incorrecto']);
+      this.router.navigate(['/incorrecto'])
     }
   }
 
+  ngOnInit() {}
 }

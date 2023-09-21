@@ -6,6 +6,8 @@ import { Router, NavigationExtras } from '@angular/router';
 import { ToastController } from '@ionic/angular';
 import { Usuario } from 'src/app/model/Usuario';
 
+
+
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -65,6 +67,9 @@ export class LoginPage implements OnInit {
       return;
     }
 
+
+  
+
     this.mostrarMensaje('¡Bienvenido!');
 
     /*
@@ -102,7 +107,9 @@ export class LoginPage implements OnInit {
 
     if (usu) {
       this.usuario = usu;
+      
       return true;
+
     }
     else {
       this.mostrarMensaje('Las credenciales no son correctas!');

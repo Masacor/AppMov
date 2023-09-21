@@ -9,6 +9,13 @@
 // }  
 
 
+ion-header#mi-encabezado {
+  background-color:#012C56; 
+  height: 10%; 
+}
+
+
+
 ion-content {
   --padding-top: 20px;
   --padding-bottom: 20px;
@@ -28,13 +35,21 @@ ion-title {
   }
   
   /* Estilo para el card */
-  ion-card {
-    max-width: 50%;
-    margin: 0 auto;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
+  // ion-card {
+  //   max-width: 50%;
+  //   margin: 0 auto;
+  //   background-color: #f9f9f9;
+  //   border-radius: 10px;
+  //   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  // }
+
+
+ion-card {
+  margin: auto;
+  max-width: 400px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+}
   
   /* Estilo para el card title */
   ion-card-title {
@@ -54,7 +69,14 @@ ion-title {
   ion-button {
     width: 100%;
     margin-bottom: 12px;
-    
+    color:#1A1A1A;
+    --background: #FFB800;
+    --background-hover: #FFB800;
+    --background-activated: #FFB800;
+    --background-focused: #FFB800;
+  
+    --padding-top: 10px;
+    --padding-bottom: 10px
   }
   
   /* Estilo para el enlace de recuperar contraseña */
