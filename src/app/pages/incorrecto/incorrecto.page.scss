@@ -1,6 +1,11 @@
 ion-content {
     --background: transparent url('https://www.duoc.cl/wp-content/uploads/2020/05/header-sede-plaza-oeste.png') no-repeat center center / cover;
     }
+
+    ion-header#mi-encabezado {
+      background-color:#012C56;
+      height: 10%; /* Cambia la altura según tus necesidades */
+    }
     
     h1, p {
       text-align: center;

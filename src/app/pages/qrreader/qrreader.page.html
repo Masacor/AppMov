@@ -1,36 +1,35 @@
 
-<ion-header>
-  <ion-toolbar>
-    <ion-img src="https://upload.wikimedia.org/wikipedia/commons/thumb/a/aa/Logo_DuocUC.svg/2560px-Logo_DuocUC.svg.png"></ion-img>
+<ion-header id="mi-encabezado">
+  <ion-toolbar color="#1A1A1A">
+    <ion-img src="https://reqlut2.s3.sa-east-1.amazonaws.com/reqlut-images/duoc/logo_duoc_white.png?v=50.7"></ion-img>
   </ion-toolbar>
 </ion-header>
 
-<br>
-  <div class="sliding-text-container">
-    <div class="sliding-text">Escanea tu codigo QR</div>
-  </div>
-<br>
 <ion-content>
-
+  <div class="sliding-text-container">
+    <div class="sliding-text">PONER NOMBRE </div>
+  </div>
+  
+  
   <input #fileinput hidden id="input-file" type="file" accept="image/*;capture=camera" 
     (change)="verificarArchivoConQR($event.target.files)" />
 
-  <ion-button (click)="cargarImagenDesdeArchivo()" expand="full" shape="round">
+  <!-- <ion-button (click)="cargarImagenDesdeArchivo()" expand="full" shape="round">
     <ion-icon slot="start" name="camera"></ion-icon>
     Cargar Imagen con Código QR
-  </ion-button>
+  </ion-button> -->
 
-  <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()" expand="full" shape="round">
+  <ion-button *ngIf="!escaneando" (click)="comenzarEscaneoQR()" expand="full" shape="round" >
     <ion-icon slot="start" name="videocam-outline"></ion-icon>
     Comenzar Escaneo de QR
   </ion-button>
 
-  <ion-button *ngIf="escaneando" (click)="detenerEscaneoQR()" expand="full" shape="round">
+  <ion-button *ngIf="escaneando" (click)="detenerEscaneoQR()" expand="full" shape="round" >
     <ion-icon slot="start" name="stop-circle-outline"></ion-icon>
     Detener escaneo de QR
   </ion-button>
 
-  <ion-button (click)="limpiarDatos()" expand="block" expand="full" shape="round">
+  <ion-button (click)="limpiarDatos()" expand="block" expand="full" shape="round" class="custom-button">
     <ion-icon slot="start" name="trash-outline"></ion-icon>
     Limpiar datos
   </ion-button>
@@ -40,18 +39,17 @@
 
   <ion-card>
     <ion-card-header>
-      <ion-card-title>Código QR</ion-card-title>
+      <ion-card-title>Mi Clase</ion-card-title>
     </ion-card-header>
     <ion-card-content>
-      <br>
       
       <table class="tabla-qr">
         <tr>
-          <td class="ancho_columna_titulos">Bloque de Inicio</td>
+          <td class="ancho_columna_titulos">Inicio</td>
           <td>{{bloqueInicio}}</td>
         </tr>
         <tr>
-          <td>Bloque de Término</td>
+          <td>Término</td>
           <td>{{bloqueTermino}}</td>
         </tr>
         <tr>
@@ -71,11 +69,11 @@
           <td>{{idAsignatura}}</td>
         </tr>
         <tr>
-          <td>Nombre de Asignatura</td>
+          <td>Asignatura</td>
           <td>{{nombreAsignatura}}</td>
         </tr>
         <tr>
-          <td>Nombre del Profesor</td>
+          <td>Profesor</td>
           <td>{{nombreProfesor}}</td>
         </tr>
         <tr>
@@ -87,15 +85,13 @@
           <td>{{sede}}</td>
         </tr>
       </table>
+      <!-- Escaneando: {{ escaneando }} -->
 
-      <br><br>
-      Escaneando: {{ escaneando }}
-      <br>
     </ion-card-content>
   </ion-card>
 </ion-content>
-<ion-footer>
-  <ion-toolbar color="primary">
+<ion-footer >
+  <ion-toolbar color="warning">
     <ion-buttons slot="end">
       <ion-button [routerLink]="['/login']">Cerrar Sesión</ion-button>
     </ion-buttons>
